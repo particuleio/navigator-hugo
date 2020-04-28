@@ -1679,7 +1679,8 @@ a:focus, a:hover {
 }
 
 .blog-single li:before {
-  content: "•";
+  content: "• ";
+  font-weight: bold;
 }
 #blog-page {
   margin: 0 0 40px;
