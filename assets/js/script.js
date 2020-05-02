@@ -264,6 +264,7 @@
 		marker = new google.maps.Marker({
 			position: nottingham,
 			map: map,
+			icon: pinIcon,
 			title: 'navigator'
 		});
 	}

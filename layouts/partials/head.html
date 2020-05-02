@@ -20,6 +20,13 @@
 {{ end }}
 
 
+
+{{ "<!-- plugins -->" | safeHTML }}
+{{ range .Site.Params.plugins.css }}
+<link rel="stylesheet" href="{{ .URL | absURL }} ">
+{{ end }}
+
+
 {{"<!-- Stylesheets -->" | safeHTML}}
 {{ "<!-- Themefisher Icon font -->" | safeHTML }}
 <link rel="stylesheet" href="{{ `plugins/themefisher-font/style.css` | absURL }}">
