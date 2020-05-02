@@ -220,15 +220,7 @@
 
 		var style = [{
 			"stylers": [{
-				"hue": "#ff61a6"
-			}, {
 				"visibility": "on"
-			}, {
-				"invert_lightness": true
-			}, {
-				"saturation": 40
-			}, {
-				"lightness": 10
 			}]
 		}];
 
@@ -272,7 +264,6 @@
 		marker = new google.maps.Marker({
 			position: nottingham,
 			map: map,
-			icon: pinIcon,
 			title: 'navigator'
 		});
 	}
