@@ -511,10 +511,15 @@ a:focus, a:hover {
   background-size: cover;
   background: #326ce5;
 }
+.bg-pricing-terraform {
+  background-size: cover;
+  background: #5432C2;
+}
 .bg-pricing-openstack {
   background-size: cover;
   background: #ed1944;
 }
+
 
 .bg-pricing-aws {
   background-size: cover;
