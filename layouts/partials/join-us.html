@@ -1,0 +1,44 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ with $data.join_us }}
+    {{ if .enable }}
+    {{ "<!-- Philosophy Section Start -->" | safeHTML }}
+    <section class="about-mission-vision section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="title">
+                        {{ with .topTitle }}<h4>{{ . }}</h4>{{ end }}
+                        {{ with .title }}
+                        <h2>{{ . }}</h2>
+                        <span class="border"></span>
+                        {{ end }}
+                        {{ with .subtitle }}<p>{{ . }}</p>{{ end }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="commonTab">
+                        <div class="tab-content" id="myTabContent">
+                            {{ range $index, $element := .tabItem }}
+                            <div class="tab-pane active" id="{{ .id }}">
+                                <div class="">
+                                    <div class="align-self-center">
+                                        <img class="align-self-center rounded shadow" src="{{ .image | absURL }}" alt="tab-image">
+                                    </div>
+                                    <div class="align-self-center">
+                                        {{ with .heading }}<h2>{{ . }}</h2>{{ end }}
+                                        {{ with .content }}<p>{{ . |  markdownify | safeHTML }}</p>{{ end }}
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ "<!-- Philosophy Section End -->" | safeHTML }}
+    {{ end }}
+{{ end }}
