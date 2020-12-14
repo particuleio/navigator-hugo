@@ -4,7 +4,7 @@
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 
 <meta property="og:title" content="{{ with .Params.Title }}{{ . }}{{ else }}{{ with .Site.Params.hero.description }}{{ . }}{{ end }}{{ end }}">
-<meta property="og:type" content="">
+<meta property="og:type" content="website">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:image" content="{{ with .Params.imgSocialNetwork }}{{ .|absURL }}{{ else }}{{ with .Site.Params.imgSocialNetwork }}{{ . | absURL }}{{ end }}{{ end }}">
 <meta property="og:description" content="{{ .Params.Summary }}">
@@ -41,5 +41,9 @@
 
 {{ $styles := resources.Get "css/style.css" | minify}}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+
+{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
 
 </head>
