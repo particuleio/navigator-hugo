@@ -2042,6 +2042,27 @@ img[src$='#flex10']
     margin-top: 15px
 }
 
+img[src$='#25percent']
+{
+    max-width : 25%;
+    display: block;
+    margin: 0.7rem auto;
+}
+
+img[src$='#50percent']
+{
+    max-width : 50%;
+    display: block;
+    margin: 0.7rem auto;
+}
+
+img[src$='#logosize']
+{
+    max-width : 400px;
+    display: block;
+    margin: 0.6rem auto;
+}
+
 code {
   font-size: 16px;
   color: #ff2300;
