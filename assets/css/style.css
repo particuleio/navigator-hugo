@@ -701,10 +701,22 @@ a:focus, a:hover {
   font-weight: bold;
 }
 
++@media (max-width: 768px) {
+  .hero-area .block h2 {
+    font-size: 3.5em;
+  }
+}
+
 .hero-area .block p {
   color: #fff;
   margin-bottom: 20px;
   font-size: 30px;
+}
+
++@media (max-width: 768px) {
+  .hero-area .block p {
+    font-size: 20px;
+  }
 }
 
 .hero-area .block .list-inline {
@@ -2085,3 +2097,14 @@ code, kbd, pre, samp {
 .formations {
   padding-bottom: 50px;
 }
+
+.col-hero {
+  flex: 0 0 50%;
+  max-width: 25%;
+}
+
+.col-hero-title {
+  flex: 0 0 50%;
+  max-width: 75%;
+}
+
