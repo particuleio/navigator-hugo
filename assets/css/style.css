@@ -701,7 +701,7 @@ a:focus, a:hover {
   font-weight: bold;
 }
 
-+@media (max-width: 768px) {
+@media (max-width: 768px) {
   .hero-area .block h2 {
     font-size: 3.5em;
   }
@@ -713,7 +713,7 @@ a:focus, a:hover {
   font-size: 30px;
 }
 
-+@media (max-width: 768px) {
+@media (max-width: 768px) {
   .hero-area .block p {
     font-size: 20px;
   }
@@ -2108,3 +2108,7 @@ code, kbd, pre, samp {
   max-width: 75%;
 }
 
+.img-feature {
+  max-width: 300px;
+  height: 224px;
+}
